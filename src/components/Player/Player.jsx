@@ -19,11 +19,11 @@ export class Player extends Component {
   render() {
     const { isVideoLoader } = this.state;
     const { url } = this.props;
-      const showLoader = url && !isVideoLoader
-      const playerSize = isVideoLoader ? '100%' : 0
+    const showLoader = url && !isVideoLoader
+    const playerSize = isVideoLoader ? '100%' : 0
     return (
       <div className={css.container}>
-        {showLoader && <h2>Loader</h2>}
+        {showLoader && <h2 className={css.styledPlayer}>Loader</h2>}
         {url && (
           <ReactPlayer className={css.styledPlayer}
             url={url}
